@@ -1,0 +1,46 @@
+import Providers from "@/components/global/providers";
+import { base, heading } from "@/constants/fonts";
+import { cn } from "@/lib";
+import "@/styles/globals.css";
+import { generateMetadata } from "@/utils";
+import { breadcrumbJsonLd, faqJsonLd, jsonLd, localBusinessJsonLd, productJsonLd, reviewJsonLd } from "@/utils/struct-data";
+import Script from "next/script";
+
+export const metadata = generateMetadata();
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Script
+          id="faq-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+          <Script id="product" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+    <Script id="review" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }} />
+    <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+    <Script id="localbiz" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
+  
+      </head>
+      <body
+        className={cn(
+          "min-h-screen bg-[#050505] text-foreground font-base antialiased dark",
+          base.variable,
+          heading.variable
+        )}
+      >
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
+}

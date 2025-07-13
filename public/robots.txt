@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://myshopigo.shop
+
+# Sitemaps
+Sitemap: https://myshopigo.shop/sitemap.xml
