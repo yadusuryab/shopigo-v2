@@ -3,7 +3,14 @@ import { base, heading } from "@/constants/fonts";
 import { cn } from "@/lib";
 import "@/styles/globals.css";
 import { generateMetadata } from "@/utils";
-import { breadcrumbJsonLd, faqJsonLd, jsonLd, localBusinessJsonLd, productJsonLd, reviewJsonLd } from "@/utils/struct-data";
+import {
+  breadcrumbJsonLd,
+  faqJsonLd,
+  jsonLd,
+  localBusinessJsonLd,
+  productJsonLd,
+  reviewJsonLd,
+} from "@/utils/struct-data";
 import Script from "next/script";
 
 export const metadata = generateMetadata();
@@ -26,11 +33,40 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
-          <Script id="product" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
-    <Script id="review" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }} />
-    <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-    <Script id="localbiz" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
-  
+        <Script
+          id="product"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
+        <Script
+          id="review"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+        />
+        <Script
+          id="breadcrumb"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+        <Script
+          id="localbiz"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
+          }}
+        />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-H5MLZF5SED"
+        ></Script>
+        <Script strategy="afterInteractive" id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-H5MLZF5SED');
+          `}
+        </Script>
       </head>
       <body
         className={cn(
