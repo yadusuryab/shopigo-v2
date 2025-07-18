@@ -23,6 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9427726908265759"
+     crossOrigin="anonymous"></script>
         <Script
           id="structured-data"
           type="application/ld+json"
