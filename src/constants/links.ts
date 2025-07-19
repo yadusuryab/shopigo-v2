@@ -4,8 +4,8 @@ export const NAV_LINKS = [
         link: "/about",
     },
     {
-        name: "Integrations",
-        link: "/integrations",
+        name: "Works",
+        link: "/works",
     },
     {
         name: "Pricing",
@@ -19,7 +19,7 @@ export const NAV_LINKS = [
 
 export const PRODUCT_LINKS = [
     { label: "About", href: "/about" },
-    { label: "Integrations", href: "/integrations" },
+    { label: "Works", href: "/works" },
     { label: "Pricing", href: "/pricing" },
     { label: "Demo", href: "/contact" },
 ];

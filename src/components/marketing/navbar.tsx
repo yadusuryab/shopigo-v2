@@ -5,7 +5,7 @@ import { NAV_LINKS } from "@/constants";
 import { cn } from "@/lib";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
@@ -13,28 +13,29 @@ import MobileMenu from "./mobile-menu";
 
 const Navbar = () => {
 
-    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+    // const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 10) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (window.scrollY > 10) {
+    //             setIsScrolled(true);
+    //         } else {
+    //             setIsScrolled(false);
+    //         }
+    //     };
 
-        window.addEventListener("scroll", handleScroll);
+    //     window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
 
     return (
         <header className={cn(
-            "fixed top-0 inset-x-0 z-50 w-full h-16 transition-all duration-300",
-            isScrolled ? "bg-[#050505]/50 backdrop-blur-md" : "bg-transparent",
+            "fixed top-0 inset-x-0 z-50 md:max-w-[800px] rounded-2xl border-border/95 max-w-fit my-2 mx-auto h-16 transition-all duration-300",
+            "bg-[#050505]/50 backdrop-blur-md" ,
+             "shadow-[inset_0_1px_30px_rgba(255,255,255,0.1)]"
         )}>
 
             <Wrapper className="flex items-center justify-between">
@@ -48,7 +49,7 @@ const Navbar = () => {
                     </Link>
                 </motion.div>
 
-                <div className="hidden lg:flex flex-row flex-1 absolute inset-0 items-center justify-center w-max mx-auto gap-x-3 text-sm text-muted-foreground font-medium">
+                <div className="hidden lg:flex flex-row flex-1 absolute inset-0 items-center justify-center w-max mx-auto gap-x-3 text-sm text-muted-foreground ">
                     <AnimatePresence>
                         {NAV_LINKS.map((link, index) => (
                             <Container
@@ -70,10 +71,10 @@ const Navbar = () => {
                     <div className="flex items-center gap-x-4">
                         <Link href="/contact" className="hidden lg:block">
                             <Button size="sm" variant="outline">
-                                Contact Sales
+                            Let&apos;s Talk
                             </Button>
                         </Link>
-                        <div className="lg:hidden">
+                        <div className="lg:hidden ml-4">
                             <MobileMenu />
                         </div>
                     </div>

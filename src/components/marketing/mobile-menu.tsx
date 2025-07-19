@@ -2,15 +2,15 @@ import { Sheet, SheetTrigger, SheetContent, SheetClose, SheetHeader, SheetTitle 
 import { Button } from "@/components/ui/button"
 import { NAV_LINKS } from "@/constants"
 import Link from "next/link"
-import { MenuIcon } from "lucide-react"
+// import { MenuIcon } from "lucide-react"
 
 const MobileMenu = () => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button size="icon" variant="ghost">
-                    <MenuIcon className="size-5" />
-                </Button>
+            <button className="text-muted-foreground">
+                    Menu
+                </button>
             </SheetTrigger>
             <SheetContent side="right" className="p-4">
                 <SheetHeader className="sr-only">

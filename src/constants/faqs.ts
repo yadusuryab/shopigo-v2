@@ -1,7 +1,7 @@
 export const FAQS = [
     {
         question: "Are there any extra charges or hidden fees?",
-        answer: "No hidden fees at all. Our ₹500/month plan includes all features — simple, clear, and transparent.",
+        answer: "One-time payment only. No monthly fees. (Domain charge not included — paid yearly by you.)",
     },
     {
         question: "How can I contact Shopigo support?",
@@ -13,11 +13,11 @@ export const FAQS = [
     },
     {
         question: "How do I order a Shopigo website?",
-        answer: "Just visit our pricing page, pick your plan, and pay online. Your site setup starts immediately.",
+        answer: "Contact us via the ‘Let’s Talk’ button.",
     },
     {
         question: "Do you offer refunds or cancellation?",
-        answer: "Yes, if you’re not happy, you can cancel within the first month — no future payments needed.",
+        answer: "Since we invest significant time and effort into your project from day one, the advance payment is non-refundable.",
     }
 ];
 

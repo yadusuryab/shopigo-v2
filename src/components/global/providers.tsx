@@ -1,5 +1,6 @@
 "use client";
 
+import SmoothLayout from '@/constants/smoothscroll';
 import React from 'react'
 import { Toaster } from "sonner";
 
@@ -9,14 +10,14 @@ interface Props {
 
 const Providers = ({ children }: Props) => {
     return (
-        <>
+        <SmoothLayout>
             <Toaster
                 richColors
                 theme="dark"
                 position="bottom-center"
             />
             {children}
-        </>
+        </SmoothLayout>
     )
 };
 

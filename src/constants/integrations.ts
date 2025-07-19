@@ -1,96 +1,70 @@
 export type Integration = {
-    name: string;
-    description: string;
-    icon: string;
-    category: "social" | "api" | "crm" | "all";
+  name: string;
+  description: string;
+  url: string;
+  type: "ecommerce" | "landing" | "all";
 };
 
+
 export const INTEGRATION_CATEGORIES = [
-    {
-        label: "All Integrations",
-        value: "all"
-    },
-    {
-        label: "Social Integrations",
-        value: "social"
-    },
-    {
-        label: "API Integrations",
-        value: "api"
-    }
+    { label: "All Projects", value: "all" },
+    { label: "Ecommerce Sites", value: "ecommerce" },
+    { label: "Landing Pages", value: "landing" },
 ] as const;
 
 export const INTEGRATIONS: Integration[] = [
     {
-        name: "Slack",
-        description: "Connect and collaborate with your team in real-time through Slack integration.",
-        icon: "/icons/slack.svg",
-        category: "social"
-    },
-    {
-        name: "Snapchat",
-        description: "Automate your workflows by connecting Shopigo with thousands of apps through Snapchat.",
-        icon: "/icons/snapchat.svg",
-        category: "api"
-    },
-    {
-        name: "Reddit",
-        description: "Share and engage with the Reddit community directly from your Shopigo dashboard.",
-        icon: "/icons/reddit.svg",
-        category: "social"
-    },
-    {
-        name: "Discord",
-        description: "Build community and manage your Discord server with powerful integration tools.",
-        icon: "/icons/discord.svg",
-        category: "social"
-    },
-    {
-        name: "Layers",
-        description: "Manage your business presence and reviews across Layers platforms seamlessly.",
-        icon: "/icons/new.svg",
-        category: "crm"
-    },
-    {
-        name: "Figma",
-        description: "Design and prototype your projects with direct Figma integration support.",
-        icon: "/icons/figma.svg",
-        category: "api"
-    },
-    {
-        name: "Apple",
-        description: "Integrate your apps with Apple services and iOS ecosystem features.",
-        icon: "/icons/apple.svg",
-        category: "api"
-    },
-    {
-        name: "Facebook",
-        description: "Connect with your audience through comprehensive Facebook platform integration.",
-        icon: "/icons/facebook.svg",
-        category: "social"
-    },
-    {
-        name: "Threads",
-        description: "Showcase your design work and connect with the Threads creative community.",
-        icon: "/icons/threads.svg",
-        category: "social"
-    },
-    {
-        name: "Meta",
-        description: "Access Meta's suite of tools and platforms for enhanced social engagement.",
-        icon: "/icons/meta.svg",
-        category: "social"
-    },
-    {
-        name: "LinkedIn",
-        description: "Build your professional network and share updates via LinkedIn integration.",
-        icon: "/icons/linkedin.svg",
-        category: "social"
-    },
-    {
-        name: "Snapchat",
-        description: "Engage with younger audiences through Snapchat's creative tools and features.",
-        icon: "/icons/snapchat.svg",
-        category: "social"
-    }
+        name: "The Style Zone",
+        description: "Trendy fashion ecommerce store built for mobile-first customers.",
+        url: "https://thestylezone.in",
+        type: "ecommerce",
+      },
+      {
+        name: "Delta Garage",
+        description: "Custom-built ecommerce store for automotive accessories.",
+        url: "https://deltagarage.in",
+        type: "ecommerce",
+      },
+      {
+        name: "Brand Corner",
+        description: "Minimalistic ecommerce platform for a multi-brand retailer.",
+        url: "https://brandcorner.co.in",
+        type: "ecommerce",
+      },
+      {
+        name: "Footmart",
+        description: "Footwear ecommerce store with fast checkout and clean UI.",
+        url: "https://footmart.co.in",
+        type: "ecommerce",
+      },
+      {
+        name: "Moto Store",
+        description: "Performance bike gear and accessories store.",
+        url: "https://motostore.co.in",
+        type: "ecommerce",
+      },
+      {
+        name: "Groovex",
+        description: "Personal care ecommerce site built with Shopigo.",
+        url: "https://groovex.myshopigo.shop",
+        type: "ecommerce",
+      },
+      {
+        name: "Shopigo Demo Store",
+        description: "Live demo of Shopigo ecommerce features.",
+        url: "https://shop.myshopigo.shop",
+        type: "ecommerce",
+      },
+      {
+        name: "Bcore",
+        description: "Landing page for a Tuition and Computer Education Institute with clean structure.",
+        url: "https://bcore.in",
+        type: "landing",
+      },
+      {
+        name: "MyShopigo",
+        description: "Landing page for your official website.",
+        url: "https://myshopigo.shop",
+        type: "landing",
+      },
 ]; 

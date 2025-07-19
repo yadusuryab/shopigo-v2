@@ -1,11 +1,18 @@
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Poppins, Space_Grotesk } from "next/font/google";
 
-export const heading = Space_Grotesk({
+export const heading = Poppins({
     subsets: ["latin"],
     variable: "--font-heading",
+    weight: "300"
 });
 
-export const base = Inter({
+export const base = Poppins({
     subsets: ["latin"],
     variable: "--font-base",
+    weight: "200"
+});
+
+export const custom = Space_Grotesk({
+    subsets: ["latin"],
+    variable: "--font-custom",
 });
