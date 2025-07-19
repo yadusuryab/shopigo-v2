@@ -102,9 +102,9 @@ html, body {
   --sidebar-accent-foreground: oklch(0 0 0);
   --sidebar-border: oklch(0.9400 0 0);
   --sidebar-ring: oklch(0 0 0);
-  --font-sans: var(--font-base), sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: Geist Mono, monospace;
+  --font-sans: var(--font-base);
+  --font-serif: var(--font-base), serif;
+  --font-mono: var(--font-base), monospace;
   --font-heading:var(--font-heading);
   --font-base:var(--font-base);
   --font-custom:var(--font-custom);
@@ -155,9 +155,9 @@ html, body {
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.3200 0 0);
   --sidebar-ring: oklch(0.7200 0 0);
-  --font-sans: var(--font-base), sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: Geist Mono, monospace;
+  -font-sans: var(--font-base);
+  --font-serif: var(--font-base), serif;
+  --font-mono: var(--font-base), monospace;
   --font-heading:var(--font-heading);
   --font-base:var(--font-base);
   --font-custom:var(--font-custom);

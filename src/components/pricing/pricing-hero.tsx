@@ -76,7 +76,7 @@ const PricingHero = () => {
                     <div className="space-y-2 w-full">
                     
                         <div>
-                          <h2 className="text-white font-extrabold italic uppercase tracking-wider text-2xl mb-2">
+                          <h2 className="text-white font-extrabold  italic uppercase tracking-wider text-2xl mb-2">
                             {plan.name}
                           </h2>
                           <p className="text-sm font-light">
